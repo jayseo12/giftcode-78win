@@ -1,0 +1,963 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fff7e8" />
+  <meta name="robots" content="index, follow" />
+  <meta name="description" content="78Win, Đăng ký 78Win, link 78Win, tải 78Win, 78Win link chính thức và thông tin các nhóm game trực tuyến." />
+  <title>78Win - Đăng ký 78Win, Link 78Win Chính Thức & Tải 78Win</title>
+
+  <style>
+    /* 78WIN SINGLE SECTION TEMPLATE */
+    :root {
+      /* [1] THAY HÌNH NỀN (BACKGROUND IMAGE) */
+      --bg-image: url('https://gpstrackerhuren.nl/wp-content/uploads/2026/09/hero-giua-78win.webp'); 
+      --bg-overlay-color: rgba(7, 7, 7, 0.52); /* Lớp phủ mờ giúp nổi bật nội dung trên ảnh nền */
+
+      --primary: #ffb300;
+      --primary-dark: #e87500;
+      --primary-deep: #17110a;
+      --accent: #ffd75a;
+      --accent-soft: #fff0c2;
+
+      --bg: #090806;
+      --bg-2: #17130d;
+      --surface: rgba(255, 255, 255, 0.08);
+      --surface-solid: #11100d;
+
+      --text: #fffaf0;
+      --text-soft: #c9c0b0;
+      --border: rgba(255, 179, 0, 0.30);
+
+      --success: #f6b51a;
+      --danger: #e85b31;
+
+      --shadow-lg: 0 26px 70px rgba(255, 145, 0, 0.20);
+      --shadow-md: 0 16px 40px rgba(255, 145, 0, 0.13);
+
+      --radius-xl: 34px;
+      --radius-lg: 24px;
+      --radius-md: 16px;
+      --radius-sm: 12px;
+
+      --container: 1440px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: "Be Vietnam Pro", "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 15% 20%, rgba(255, 183, 0, 0.18), transparent 24%),
+        radial-gradient(circle at 92% 22%, rgba(255, 255, 255, 0.08), transparent 26%),
+        radial-gradient(circle at 75% 100%, rgba(255, 105, 0, 0.16), transparent 30%),
+        linear-gradient(135deg, #18130a 0%, var(--bg) 42%, #090806 100%);
+      overflow-x: hidden;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    .page {
+      position: relative;
+      min-height: 100vh;
+      isolation: isolate;
+      overflow: hidden;
+    }
+
+    .page-bg-image {
+      position: absolute;
+      inset: 0;
+      z-index: -3;
+      background:
+        linear-gradient(var(--bg-overlay-color), var(--bg-overlay-color)),
+        var(--bg-image) center / cover no-repeat fixed;
+      pointer-events: none;
+    }
+
+    .page::before,
+    .page::after {
+      content: "";
+      position: absolute;
+      pointer-events: none;
+      z-index: -2;
+    }
+
+    .page::before {
+      width: 780px;
+      height: 780px;
+      left: -230px;
+      top: -260px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 177, 0, 0.24), rgba(86, 223, 250, 0) 70%);
+      filter: blur(8px);
+    }
+
+    .page::after {
+      width: 900px;
+      height: 600px;
+      right: -320px;
+      bottom: -260px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 91, 0, 0.18), rgba(38, 184, 230, 0) 70%);
+      filter: blur(14px);
+    }
+
+    .grid-lines {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      opacity: 0.38;
+      pointer-events: none;
+      background:
+        linear-gradient(118deg, transparent 0 27%, rgba(255, 179, 0, 0.08) 27.15%, transparent 27.4% 100%),
+        linear-gradient(62deg, transparent 0 63%, rgba(255, 255, 255, 0.05) 63.15%, transparent 63.4% 100%),
+        linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0));
+    }
+
+    .code-section {
+      width: 100%;
+      min-height: 100vh;
+      padding: clamp(28px, 3.2vw, 48px) clamp(24px, 4vw, 68px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .section-inner {
+      width: min(100%, 1540px);
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: center;
+      gap: clamp(24px, 3vw, 42px);
+    }
+
+    /* --- SECTION 1: TOP HERO COPY --- */
+    .top-section {
+      width: 100%;
+      flex: 0 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero-copy {
+      width: 100%;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      z-index: 20;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 0 auto 10px;
+      color: var(--primary-deep);
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      font-size: clamp(36px, 4vw, 68px);
+      line-height: 1;
+    }
+
+    .brand-mark {
+      width: 58px;
+      height: 58px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--primary), #54d9f5);
+      color: white;
+      box-shadow: 0 12px 30px rgba(0, 151, 198, 0.25);
+      font-weight: 1000;
+      font-size: 27px;
+      transform: rotate(45deg);
+    }
+
+    .brand-mark span {
+      transform: rotate(-45deg);
+    }
+
+    .eyebrow {
+      width: 100%;
+      margin: 10px auto 0;
+      text-align: center;
+      font-size: clamp(18px, 1.6vw, 28px);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.055em;
+      color: var(--primary);
+      text-wrap: balance;
+    }
+
+    .trust-row {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 16px;
+    }
+
+    .trust-pill {
+      padding: 8px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(6, 150, 195, 0.18);
+      background: rgba(255,255,255,.60);
+      color: var(--primary-deep);
+      font-weight: 800;
+      font-size: 12px;
+      box-shadow: 0 8px 22px rgba(0, 130, 170, 0.08);
+      backdrop-filter: blur(8px);
+    }
+
+    /* --- SECTION 2: 2 CỘT CÂN ĐỐI --- */
+    .content-section {
+      width: 100%;
+      flex: 1 1 auto;
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: clamp(28px, 3.6vw, 64px);
+      align-items: center;
+      justify-content: stretch;
+    }
+
+    .content-section::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: -18px;
+      width: min(460px, 55%);
+      height: 1px;
+      transform: translateX(-50%);
+      background: linear-gradient(90deg, transparent, rgba(7,159,210,.18), transparent);
+      pointer-events: none;
+    }
+
+    /* ===== LEFT VISUAL COLUMN ===== */
+    .visual-column {
+      width: 100%;
+      min-width: 0;
+      min-height: 560px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .hero-stage {
+      position: relative;
+      width: min(100%, 640px);
+      height: 540px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .circle-backdrop {
+      position: absolute;
+      width: clamp(320px, 82%, 460px);
+      height: clamp(320px, 82%, 460px);
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle at 35% 35%, #fff4c7 0%, #ffc928 50%, #ff7a00 100%);
+      border: 6px solid rgba(255, 255, 255, 0.10);
+      box-shadow:
+        0 0 50px rgba(255, 165, 0, 0.42),
+        inset 0 0 30px rgba(255, 255, 255, 0.08);
+      z-index: 1;
+      animation: breathe 5s ease-in-out infinite;
+    }
+
+    .circle-backdrop::before {
+      content: "";
+      position: absolute;
+      inset: -18px;
+      border-radius: 50%;
+      border: 2px dashed rgba(255, 179, 0, 0.42);
+      animation: spinRing 25s linear infinite;
+    }
+
+    @keyframes spinRing {
+      0% { transform: translate(0, 0) rotate(0deg); }
+      100% { transform: translate(0, 0) rotate(360deg); }
+    }
+
+    .visual-image {
+      position: relative;
+      z-index: 3;
+      width: auto;
+      max-width: 95%;
+      max-height: 470px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+      filter: drop-shadow(0 20px 30px rgba(3, 93, 121, 0.28));
+      animation: floatVisual 6s ease-in-out infinite;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+
+    .gift {
+      position: absolute;
+      z-index: 6;
+      bottom: 8%;
+      left: 3%;
+      width: 100px;
+      height: 78px;
+      border-radius: 16px;
+      background:
+        linear-gradient(90deg, transparent 42%, #d8fbff 42% 58%, transparent 58%),
+        linear-gradient(#f5fdff, #3a2610);
+      border: 3px solid #ffad17;
+      box-shadow: 0 16px 26px rgba(140, 75, 0, 0.28);
+      transform: rotate(-9deg);
+      animation: floatVisual 5s ease-in-out infinite reverse;
+    }
+
+    .gift::before {
+      content: "";
+      position: absolute;
+      left: -4px;
+      right: -4px;
+      top: 18px;
+      height: 16px;
+      border-radius: 6px;
+      background: linear-gradient(90deg, #ff9a00, #ffe38a, #ff9a00);
+    }
+
+    .gift.right {
+      left: auto;
+      right: 3%;
+      bottom: 10%;
+      transform: rotate(9deg) scale(0.92);
+    }
+
+    /* ===== RIGHT FORM COLUMN ===== */
+    .form-column {
+      width: 100%;
+      min-width: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 5;
+    }
+
+    .form-shell {
+      position: relative;
+      width: min(100%, 620px);
+      margin: 0 auto;
+      padding: 34px;
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(145deg, rgba(255,255,255,.94), rgba(232,250,255,.82));
+      border: 2px solid rgba(4, 154, 198, 0.55);
+      box-shadow:
+        var(--shadow-lg),
+        inset 0 1px 0 rgba(255,255,255,.95);
+      overflow: hidden;
+      backdrop-filter: blur(18px);
+    }
+
+    .form-shell::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 95% 0%, rgba(105, 233, 255, .38), transparent 28%),
+        radial-gradient(circle at 5% 100%, rgba(75, 209, 242, .16), transparent 30%);
+    }
+
+    .form-head {
+      position: relative;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .form-kicker {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 7px 16px;
+      border-radius: 999px;
+      color: white;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, var(--primary-dark), var(--primary));
+      box-shadow: 0 10px 22px rgba(255, 153, 0, 0.20);
+    }
+
+    .form-title {
+      position: relative;
+      margin: 0;
+      font-size: clamp(34px, 3.8vw, 54px);
+      line-height: 1.1;
+      font-weight: 1000;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      background: linear-gradient(180deg, #056285 0%, #0093c4 50%, #024561 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      filter: drop-shadow(0 3px 6px rgba(4, 82, 114, 0.22));
+    }
+
+    .form-title span {
+      display: block;
+      margin-top: 2px;
+      background: linear-gradient(180deg, #FFE770 0%, #FFB700 45%, #E65100 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      filter: drop-shadow(0 2px 4px rgba(120, 50, 0, 0.35));
+      position: relative;
+    }
+
+    .form-subtitle {
+      margin-top: 14px;
+      color: var(--text-soft);
+      font-size: 14px;
+      line-height: 1.65;
+      font-weight: 600;
+    }
+
+    .form {
+      position: relative;
+    }
+
+    .field {
+      margin-top: 18px;
+    }
+
+    .field label {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 9px;
+      color: var(--primary-dark);
+      font-size: 15px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .03em;
+    }
+
+    .label-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 9px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 28px;
+      color: white;
+      background: linear-gradient(135deg, var(--primary), #4dd4ef);
+      font-size: 13px;
+      box-shadow: 0 7px 15px rgba(0, 153, 200, .17);
+    }
+
+    .input-wrap {
+      position: relative;
+    }
+
+    .input-wrap input {
+      width: 100%;
+      min-height: 62px;
+      padding: 0 18px;
+      border: 2px solid rgba(255, 178, 0, 0.34);
+      border-radius: 17px;
+      color: var(--text);
+      background: rgba(255,255,255,.85);
+      outline: none;
+      font-size: 16px;
+      font-weight: 600;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.95);
+      transition:
+        border-color .25s ease,
+        box-shadow .25s ease,
+        transform .25s ease,
+        background .25s ease;
+    }
+
+    .input-wrap input::placeholder {
+      color: #a59b89;
+      font-weight: 500;
+    }
+
+    .input-wrap input:hover {
+      border-color: rgba(255, 178, 0, 0.55);
+      background: #fff;
+    }
+
+    .input-wrap input:focus {
+      border-color: var(--primary);
+      background: white;
+      box-shadow:
+        0 0 0 5px rgba(7, 159, 210, .11),
+        0 12px 26px rgba(255, 153, 0, .10);
+      transform: translateY(-1px);
+    }
+    .submit-btn {
+      position: relative;
+      width: 100%;
+      min-height: 72px;
+      margin-top: 22px;
+      border: 0;
+      border-radius: 19px;
+      overflow: hidden;
+      color: white;
+      background: linear-gradient(135deg, #ffd34d 0%, #ff9b12 48%, #e95e00 100%);
+      font-size: clamp(20px, 2vw, 26px);
+      font-weight: 1000;
+      letter-spacing: .01em;
+      box-shadow:
+        0 16px 32px rgba(255, 145, 0, .27),
+        inset 0 1px 0 rgba(255,255,255,.42);
+      transition:
+        transform .22s ease,
+        box-shadow .22s ease,
+        filter .22s ease;
+      cursor: pointer;
+    }
+
+    .submit-btn::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -38%;
+      width: 30%;
+      transform: skewX(-22deg);
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.65), transparent);
+      animation: shine 3.8s ease-in-out infinite;
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-3px) scale(1.005);
+      box-shadow:
+        0 22px 40px rgba(255, 130, 0, .34),
+        0 0 0 5px rgba(255, 174, 0, .10);
+      filter: saturate(1.08);
+    }
+
+    .submit-btn:active {
+      transform: translateY(0) scale(.995);
+    }
+
+    .button-content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .btn-arrow {
+      width: 30px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(255,255,255,.20);
+      animation: pulseArrow 2s ease-in-out infinite;
+    }
+
+    .helper-links {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .helper-link {
+      min-height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 0 15px 0 18px;
+      text-decoration: none;
+      border: 1.5px solid rgba(255, 179, 0, .30);
+      border-radius: 999px;
+      color: var(--primary-dark);
+      background: rgba(255,255,255,.54);
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+      transition:
+        transform .22s ease,
+        border-color .22s ease,
+        background .22s ease,
+        box-shadow .22s ease;
+    }
+
+    .helper-link:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255, 179, 0, .58);
+      background: white;
+      box-shadow: 0 12px 24px rgba(2, 130, 169, .11);
+    }
+
+    .helper-icon {
+      width: 29px;
+      height: 29px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 29px;
+      border-radius: 50%;
+      color: white;
+      background: linear-gradient(135deg, var(--primary), #ffb31a);
+      box-shadow: 0 6px 14px rgba(255, 157, 0, .18);
+    }
+
+    .form-note {
+      margin-top: 15px;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      color: #a69b89;
+      font-size: 11px;
+      line-height: 1.65;
+    }
+
+    .secure {
+      color: var(--success);
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .status-message {
+      min-height: 0;
+      margin-top: 12px;
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--success);
+      opacity: 0;
+      transform: translateY(4px);
+      transition: opacity .25s ease, transform .25s ease;
+      text-align: center;
+    }
+
+    .status-message.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== DECORATION ===== */
+    .spark {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 0 14px rgba(255,255,255,.9), 0 0 24px rgba(255, 183, 0, .65);
+      opacity: .9;
+      animation: sparkle 2.4s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    .spark.s1 { left: 7%; top: 21%; animation-delay: -.4s; }
+    .spark.s2 { left: 19%; top: 76%; animation-delay: -1.5s; transform: scale(.7); }
+    .spark.s3 { left: 74%; top: 17%; animation-delay: -.8s; transform: scale(.6); }
+    .spark.s4 { left: 89%; top: 68%; animation-delay: -.1s; transform: scale(.85); }
+
+    /* ===== KEYFRAME ANIMATIONS ===== */
+    @keyframes floatVisual {
+      0%, 100% { transform: translateY(0) translateX(0); }
+      50% { transform: translateY(-12px) translateX(4px); }
+    }
+
+    @keyframes breathe {
+      0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: .86; }
+      50% { transform: translate(-50%, -50%) scale(1.06); opacity: 1; }
+    }
+
+    @keyframes shine {
+      0%, 30% { left: -38%; }
+      56%, 100% { left: 120%; }
+    }
+
+    @keyframes pulseArrow {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(3px); }
+    }
+
+    @keyframes sparkle {
+      0%, 100% { opacity: .25; transform: scale(.65); }
+      50% { opacity: 1; transform: scale(1.18); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+      }
+    }
+
+    /* ===== RESPONSIVE MEDIA QUERIES ===== */
+    @media (max-width: 1080px) {
+      .code-section {
+        padding: 30px 20px;
+      }
+
+      .content-section {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .visual-column {
+        min-height: 480px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .code-section {
+        padding: 22px 14px 28px;
+      }
+
+      .section-inner {
+        gap: 20px;
+      }
+
+      .brand {
+        font-size: 42px;
+      }
+
+      .brand-mark {
+        width: 45px;
+        height: 45px;
+        border-radius: 14px;
+        font-size: 21px;
+      }
+
+      .eyebrow {
+        font-size: 15px;
+      }
+
+      .trust-pill {
+        font-size: 10px;
+        padding: 7px 11px;
+      }
+
+      .visual-column {
+        min-height: 400px;
+      }
+
+      .hero-stage {
+        height: 400px;
+      }
+
+      .gift {
+        width: 80px;
+        height: 62px;
+      }
+
+      .form-shell {
+        padding: 22px 17px;
+        border-radius: 24px;
+      }
+
+      .form-title {
+        font-size: 34px;
+      }
+
+      .input-wrap input {
+        min-height: 58px;
+      }
+
+      .submit-btn {
+        min-height: 65px;
+        font-size: 20px;
+      }
+
+      .helper-links {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <div class="page-bg-image" aria-hidden="true"></div>
+    <div class="grid-lines" aria-hidden="true"></div>
+    <span class="spark s1" aria-hidden="true"></span>
+    <span class="spark s2" aria-hidden="true"></span>
+    <span class="spark s3" aria-hidden="true"></span>
+    <span class="spark s4" aria-hidden="true"></span>
+
+    <section class="code-section" aria-labelledby="code-title">
+      <div class="section-inner">
+
+        <!-- ========================= SECTION 1: TOP HERO (CANH GIỮA 100%) ========================= -->
+        <div class="top-section">
+          <div class="hero-copy">
+
+            <!-- [2] THAY LOGO-->
+            <img src="https://gpstrackerhuren.nl/wp-content/uploads/2026/07/logo-78win-1024x356.webp" style="height: 70px; width: auto;" alt="Logo 78Win" />
+
+            <p class="eyebrow" id="heroEyebrow">ĐĂNG KÝ 78WIN - TRUY CẬP LINK 78WIN CHÍNH THỨC</p>
+
+            <div class="trust-row" aria-label="Ưu điểm">
+              <span class="trust-pill">LINK CHÍNH THỨC</span>
+              <span class="trust-pill">ĐĂNG KÝ NHANH</span>
+              <span class="trust-pill">TỐI ƯU MOBILE</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========================= SECTION 2: CONTENT SECTION (2 CỘT TRÁI - PHẢI) ========================= -->
+        <div class="content-section">
+
+          <!-- CỘT BÊN TRÁI: Hình ảnh người, vòng tròn xanh tỏa sáng & quà tặng -->
+          <div class="visual-column">
+            <div class="hero-stage">
+              <!-- Vòng tròn xanh nhạt tỏa sáng - Căn chuẩn center 100% sau lưng hình người -->
+              <div class="circle-backdrop" aria-hidden="true"></div>
+
+              <!-- [3] THAY HÌNH ẢNH NHÂN VẬT / CẦU THỦ / KHUYẾN MÃI -->
+              <img class="visual-image" src="https://gpstrackerhuren.nl/wp-content/uploads/2026/09/hero-giua-78win.webp" alt="78Win - Hình ảnh giới thiệu thương hiệu" id="realVisualImg" />
+
+              <!-- Hộp quà tặng xung quanh -->
+              <div class="gift"></div>
+              <div class="gift right"></div>
+            </div>
+          </div>
+
+          <!-- CỘT BÊN PHẢI: Biểu mẫu đăng ký 78Win -->
+          <div class="form-column">
+            <div class="form-shell">
+              <div class="form-head">
+                <span class="form-kicker">78WIN • LINK TRUY CẬP</span>
+                <h1 class="form-title" id="code-title">
+                  ĐĂNG KÝ
+                  <span>78WIN</span>
+                </h1>
+                <p class="form-subtitle">Điền thông tin minh họa bên dưới để truy cập link 78Win. Form này chỉ là giao diện mẫu.</p>
+              </div>
+
+              <!-- Form HTML -->
+              <form class="form" id="registerForm" onsubmit="handleFormSubmit(event)">
+                <div class="field">
+                  <label for="phoneInputValue">
+                    <span class="label-icon">#</span>
+                    TÊN ĐĂNG NHẬP
+                  </label>
+                  <div class="input-wrap">
+                    <input type="text" id="phoneInputValue" placeholder="Nhập tên đăng nhập..." required autocomplete="off" />
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label for="phoneInputValue">
+                    <span class="label-icon">👤</span>
+                    SỐ ĐIỆN THOẠI
+                  </label>
+                  <div class="input-wrap">
+                    <input type="text" id="phoneInputValue" placeholder="Nhập số điện thoại..." required autocomplete="off" />
+                  </div>
+                </div>
+
+                <!-- ĐÃ FIX: Sửa cấu trúc nút bấm để chạy form submit và giữ nguyên CSS đẹp -->
+                <button type="submit" class="submit-btn">
+                  <div class="button-content">
+                    <span>78WIN NGAY</span>
+                    <span class="btn-arrow">⚡</span>
+                  </div>
+                </button>
+
+                <div class="status-message" id="statusMsg"></div>
+              </form>
+
+              <div class="helper-links">
+                <a href="https://tinyurl.com/gpstrackerhuren-nl" class="helper-link"  target="_blank" rel="noopener noreferrer" >
+                  <span>ĐĂNG KÝ 78WIN</span>
+                  <span class="helper-icon">➕</span>
+                </a>
+                <a href="https://tinyurl.com/gpstrackerhuren-nl" class="helper-link" target="_blank" rel="noopener noreferrer">
+                  <span>LINK 78WIN</span>
+                  <span class="helper-icon">💬</span>
+                </a>
+              </div>
+
+              <div class="form-note">
+                <span class="secure">🔒 BẢO MẬT 100%</span>
+                <span>Đây là giao diện minh họa. Không nhập thông tin nhạy cảm nếu chưa xác minh URL.</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function handleFormSubmit(event) {
+      // Ngăn form tự động load lại trang
+      event.preventDefault();
+      
+      const usernameInput = document.getElementById('phoneInputValue').value.trim();
+      const usernameInput = document.getElementById('phoneInputValue').value.trim();
+      const statusMsg = document.getElementById('statusMsg');
+
+      if (!usernameInput || !usernameInput) return;
+
+      // 1. Hiển thị thông báo thành công
+      statusMsg.textContent = '🎉 Đã mở link 78Win cho tài khoản: ' + usernameInput;
+      statusMsg.classList.add('show');
+
+      // 2. Chuyển hướng người dùng tự động sang Tab mới (Đã tích hợp vào đây)
+      const TARGET_URL = 'https://tinyurl.com/gpstrackerhuren-nl';
+      window.open(TARGET_URL, '_blank');
+
+      // 3. Xóa dữ liệu cũ sau 0.5s và ẩn thông báo sau 4s
+      setTimeout(() => {
+        document.getElementById('registerForm').reset();
+        setTimeout(() => {
+          statusMsg.classList.remove('show');
+        }, 4000);
+      }, 500);
+    } 
+  </script>
+</body>
+</html>
